@@ -16,15 +16,43 @@ export default {
 @use '../assets/scss/style.scss' as *;
 
 .card {
-    @include square(calc(100% / 3));
+    @include square(100%);
     height: calc(100vw / 3);
     display: inline-block;
     border-radius: 0;
     margin: -3px; // DA RIMUOVERE
 
     &.small {
-        @include square(calc(100% / 4));
-        height: 280px;
+        height: 100px;
+    }
+}
+
+// Card Responsive
+@media screen and (min-width: 700px) {
+    .card {
+        width: calc(100% / 2);
+
+        &.small:not(footer .card) {
+            width: calc(100%);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: calc(100% / 3);
+
+        &.small {
+            width: calc(100% / 2);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .card.small,
+    .card.small:not(footer .card) {
+        width: calc(100% / 4);
     }
 }
 </style>
