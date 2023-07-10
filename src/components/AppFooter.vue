@@ -1,5 +1,21 @@
-<script></script>
+<script>
+import BaseCard from './BaseCard.vue';
+export default {
+    components: { BaseCard }
+}
+</script>
 
-<template></template>
+<template>
+    <footer>
+        <div class="container-m">
 
-<style></style>
+            <BaseCard v-for="n in 4" :className="'card small'" />
+        </div>
+    </footer>
+</template>
+
+<style lang="scss" scoped>
+footer {
+    height: 300px;
+}
+</style>
