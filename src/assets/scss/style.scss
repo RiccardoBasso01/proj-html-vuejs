@@ -45,7 +45,8 @@ h3{
     align-items: $align-items;
 }
 
-@mixin square($space){
+@mixin rounded($space){
     width: $space;
     height: $space;
+    border-radius: 50%;
 }
