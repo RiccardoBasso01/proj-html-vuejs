@@ -9,7 +9,25 @@ export default {
     <footer>
         <div class="container-m">
 
-            <BaseCard v-for="n in 4" :className="'card small'" />
+            <BaseCard :className="'card small'">
+                <img src="../assets/img/logo-sidearea-1.png" alt="">
+                <div>lets get crative</div>
+            </BaseCard>
+
+            <BaseCard :className="'card small'">
+                <div>maree.osvner@gmail.com</div>
+                <div>lets get crative</div>
+            </BaseCard>
+
+            <BaseCard :className="'card small'">
+                <div>andre street 10</div>
+                <div>lets get crative</div>
+            </BaseCard>
+
+            <BaseCard :className="'card small'">
+                <div>stay in touch with us</div>
+                <div>lets get crative</div>
+            </BaseCard>
         </div>
     </footer>
 </template>

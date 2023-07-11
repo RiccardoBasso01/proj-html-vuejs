@@ -19,4 +19,14 @@ export default {
     <AppFooter />
 </template>
 
-<style></style>
+<style lang="scss">
+@use './assets/scss/style.scss' as *;
+
+body {
+    font-family: $mulish;
+}
+
+.txt-playfair-display {
+    font-family: $playfair-display;
+}
+</style>

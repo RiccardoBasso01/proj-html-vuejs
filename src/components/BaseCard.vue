@@ -1,30 +1,28 @@
 <script>
 export default {
     props: {
-        className: String
+        className: String,
     }
 }
 </script>
 
 <template>
     <div :class="className || 'card'">
-
+        <slot></slot>
     </div>
 </template>
+
+
+
 
 <style lang="scss" scoped>
 @use '../assets/scss/style.scss' as *;
 
 .card {
     @include square(100%);
-    height: calc(100vw / 3);
     display: inline-block;
     border-radius: 0;
     margin: -3px; // DA RIMUOVERE
-
-    &.small {
-        height: 100px;
-    }
 }
 
 // Card Responsive
