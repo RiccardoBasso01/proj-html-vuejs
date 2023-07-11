@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import './libreriaRB.css'
-import './siteStructor.css'
 import App from './App.vue'
 // Fonts
 import '@fontsource-variable/mulish'; // Supports weights 200-900

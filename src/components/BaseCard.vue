@@ -19,11 +19,11 @@ export default {
 @use '../assets/scss/style.scss' as *;
 
 .card {
-    @include square(100%);
-    display: inline-block;
+    width: 100%;
     border-radius: 0;
-    margin: -3px; // DA RIMUOVERE
 }
+
+
 
 // Card Responsive
 @media screen and (min-width: 700px) {

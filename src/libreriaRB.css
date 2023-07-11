@@ -539,11 +539,8 @@ header {
 .card-l,
 .card {
     width: 100%;
-    margin: 50px auto;
 
     text-align: center;
-    border: 1px solid var(--grey);
-    border-radius: 50px;
     overflow: hidden;
 }
 
