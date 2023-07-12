@@ -265,23 +265,23 @@ header {
     margin-top: 100px;
 }
 
-.m-Y-1 {
+.mY-1 {
     margin: 10px 0;
 }
 
-.m-Y-2 {
+.mY-2 {
     margin: 20px 0;
 }
 
-.m-Y-3 {
+.mY-3 {
     margin: 30px 0;
 }
 
-.m-Y-4 {
+.mY-4 {
     margin: 40px 0;
 }
 
-.m-Y-5 {
+.mY-5 {
     margin: 50px 0;
 }
 
@@ -305,24 +305,44 @@ header {
     padding: 50px;
 }
 
-.p-X-1 {
+.pX-1 {
     padding: 0 10px;
 }
 
-.p-X-2 {
+.pX-2 {
     padding: 0 20px;
 }
 
-.p-X-3 {
+.pX-3 {
     padding: 0 30px;
 }
 
-.p-X-4 {
+.pX-4 {
     padding: 0 40px;
 }
 
-.p-X-5 {
+.pX-5 {
     padding: 0 50px;
+}
+
+.pY-1 {
+    margin: 10px 0;
+}
+
+.pY-2 {
+    margin: 20px 0;
+}
+
+.pY-3 {
+    margin: 30px 0;
+}
+
+.pY-4 {
+    margin: 40px 0;
+}
+
+.pY-5 {
+    margin: 50px 0;
 }
 
 /**************************** width e height  *******************************/

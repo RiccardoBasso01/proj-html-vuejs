@@ -5,6 +5,7 @@ export default {
         section: String,
         title: String,
         text: String,
+        icon: Object,
         blogImg: String
     }
 }
@@ -17,11 +18,10 @@ export default {
 
         <!-- Process Cards -->
         <div v-if="section === 'process-cards'">
-            <div class="card-img">
-            </div>
+            <div class="card-img"><font-awesome-icon :icon="['fas', icon.img]" :style="{ color: icon.color }" /></div>
             <div class="description">
                 <div class="card-title">
-                    <h4>{{ title }}</h4>
+                    <h4 class="pY-2">{{ title }}</h4>
                 </div>
                 <p>{{ text }}</p>
             </div>
@@ -47,17 +47,16 @@ export default {
 @use '../assets/scss/_colors.scss' as *;
 @use '../assets/scss/style.scss' as *;
 
-.description {
-    font-size: var(--font-size-s);
-}
-
+// Sezione Process card
 .process.card>div {
     @include flex(column, center, center)
 }
 
 .process .card-img {
     @include rounded(162px);
+    @include flex(row, center, center);
     background-color: $bg-milk-glass;
+    font-size: 50px;
 }
 
 

@@ -12,8 +12,12 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faPinterestP } from '@fortawesome/free-brands-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
+import { faComment } from '@fortawesome/free-solid-svg-icons'
+import { faCloud } from '@fortawesome/free-solid-svg-icons'
+import { faPen } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faTwitter, faPinterestP, faFacebookF, faLinkedinIn)
+library.add(faTwitter, faPinterestP, faFacebookF, faLinkedinIn, faLightbulb, faComment, faCloud, faPen)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)

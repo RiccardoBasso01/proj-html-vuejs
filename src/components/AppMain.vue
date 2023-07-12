@@ -9,19 +9,35 @@ export default {
             processCards: [
                 {
                     title: 'First theres an idea',
-                    text: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.'
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, saepe nam? Amet dolor mollitia.',
+                    icon: {
+                        img: 'lightbulb',
+                        color: '#badac9' // $txt-misty-jade
+                    }
                 },
                 {
                     title: 'Then we talk about',
-                    text: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.'
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, saepe nam? Amet dolor mollitia.',
+                    icon: {
+                        img: 'comment',
+                        color: ' #f8d12d' // $txt-dream-of-spring
+                    }
                 },
                 {
                     title: 'And we think about',
-                    text: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.'
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, saepe nam? Amet dolor mollitia.',
+                    icon: {
+                        img: 'cloud',
+                        color: ' #80465f' // $txt-wild-plum
+                    }
                 },
                 {
                     title: 'So we draw along',
-                    text: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.'
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, saepe nam? Amet dolor mollitia.',
+                    icon: {
+                        img: 'pen',
+                        color: '#eb6950' // $txt-connect-red
+                    }
                 }
             ],
             blogCards: [
@@ -66,11 +82,11 @@ export default {
         </section>
 
         <!-- Process Cards -->
-        <section class="container-m">
+        <section id="process-card" class="container-m">
             <h2>Working <span class="txt-playfair-display bold">process</span></h2>
             <div class="wrapper">
                 <BaseCard :section="'process-cards'" v-for="(card, i) in processCards" :key="`Process card ${i}`"
-                    :className="'process card small'" :title="card.title" :text="card.text" />
+                    :className="'process card small'" :title="card.title" :text="card.text" :icon="card.icon" />
             </div>
         </section>
 
@@ -92,12 +108,33 @@ export default {
 @use '../assets/scss/style.scss' as *;
 @use '../assets/scss/_colors.scss' as *;
 
-#blog-list {
-    padding: 0 -20px;
-}
-
+// Sezione process card
 h2 {
     text-align: center;
     padding: 90px 0 40px 0;
+}
+
+@media screen and (min-width: 992px) {
+    #process-card .wrapper {
+        background-image: url(../assets/img/svg/svg-3.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+@mixin linearGradient($direction) {
+    background-image: linear-gradient(to $direction, white 50%, transparent 50%);
+}
+
+#process-card .card:first-child {
+    @include linearGradient(right)
+}
+
+#process-card .card:last-child {
+    @include linearGradient(left)
+}
+
+// Sezione blog list
+#blog-list {
+    padding: 0 -20px;
 }
 </style>
