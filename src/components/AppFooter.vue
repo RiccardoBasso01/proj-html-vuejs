@@ -1,6 +1,11 @@
 <script>
 import BaseCard from './BaseCard.vue';
 export default {
+    data() {
+        return {
+
+        }
+    },
     components: { BaseCard }
 }
 </script>
@@ -9,26 +14,29 @@ export default {
     <footer>
         <div class="container-m">
             <div class="wrapper">
-
-
                 <BaseCard :className="'card small'">
-                    <img src="../assets/img/logo-sidearea-1.png" alt="">
-                    <div>lets get crative</div>
+                    <a href="#"><img src="../assets/img/logo-sidearea-1.png" alt="footer logo"></a>
+                    <div class="mt-1">Lets get crative</div>
                 </BaseCard>
 
                 <BaseCard :className="'card small'">
-                    <div>maree.osvner@gmail.com</div>
-                    <div>lets get crative</div>
+                    <div><a href="#">maree@qodeinteractive.com</a></div>
+                    <div><a href="#" class="mt-1">+44645 321 789</a></div>
                 </BaseCard>
 
                 <BaseCard :className="'card small'">
-                    <div>andre street 10</div>
-                    <div>lets get crative</div>
+                    <div><a href="#">Avenue d’Auderghem 10</a></div>
+                    <div><a href="#" class="mt-1">1040 Brussels, Belgium</a></div>
                 </BaseCard>
 
                 <BaseCard :className="'card small'">
-                    <div>stay in touch with us</div>
-                    <div>lets get crative</div>
+                    <div>Stay in touch with us</div>
+                    <ul class="flex gap-3 mt-1">
+                        <li><a href="#"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>
+                        <li><a href="#"><font-awesome-icon :icon="['fab', 'pinterest-p']" /></a></li>
+                        <li><a href="#"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a></li>
+                        <li><a href="#"><font-awesome-icon :icon="['fab', 'linkedin-in']" /></a></li>
+                    </ul>
                 </BaseCard>
             </div>
         </div>
@@ -40,7 +48,7 @@ export default {
 
 footer {
     background-color: $bg-otto-ice;
-    padding: 70px 0;
+    padding: 70px 5%;
 }
 
 .card {
@@ -49,6 +57,10 @@ footer {
 }
 
 img {
-    width: 150px;
+    width: 130px;
+}
+
+li {
+    color: $black;
 }
 </style>

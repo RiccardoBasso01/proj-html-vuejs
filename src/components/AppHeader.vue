@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header class="container-m">
         <div class="logo">
             <img src="../assets/img/logo-sidearea-1.png" alt="logo">
         </div>

@@ -3,11 +3,13 @@
 
 <template>
     <div class="jumbotron">
-        <h2>Want to work with us? Send us <span class="txt-playfair-display">a message!</span></h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde animi illo corporis omnis, adipisci laudantium
-            facilis! Voluptate id nesciunt, laboriosam eius assumenda impedit voluptas accusantium incidunt quos aliquam
-            reprehenderit ea!</p>
-        <button>contact</button>
+        <div class="container-m">
+            <h2>Want to work with us? Send us <span class="txt-playfair-display bold">a message!</span></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde animi illo corporis omnis, adipisci laudantium
+                facilis! Voluptate id nesciunt, laboriosam eius assumenda impedit voluptas accusantium incidunt quos aliquam
+                reprehenderit ea!</p>
+            <button class="text-uppercase">contact</button>
+        </div>
     </div>
 </template>
 
@@ -17,6 +19,12 @@
 
 .jumbotron {
     text-align: center;
+}
+
+
+h2 {
+    text-align: center;
+    padding: 120px 0 90px 0;
 }
 
 button {

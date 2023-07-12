@@ -2,13 +2,13 @@
 
 <template>
     <div class="slider">
+
         <div class="description">
-            <h1>Our new folio <br>full of <span class="txt-playfair-display">joy</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt quam nemo odit fugiat officia debitis beatae
+            <h1>Our new folio <br>full of <span class="txt-playfair-display bold">joy</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt quam nemo odit fugiat officia debitis
+                beatae
             </p>
-            <button>
-                READ MORE
-            </button>
+            <button class="text-uppercase">read more</button>
         </div>
 
         <div class="image">
@@ -22,7 +22,8 @@
 @use '../assets/scss/_colors.scss' as *;
 
 .slider {
-    @include flex(column, center, center)
+    @include flex(column, center, center);
+    padding: 0 40px;
 }
 
 img {

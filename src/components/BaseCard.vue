@@ -21,7 +21,7 @@ export default {
             </div>
             <div class="description">
                 <div class="card-title">
-                    <h5>{{ title }}</h5>
+                    <h4>{{ title }}</h4>
                 </div>
                 <p>{{ text }}</p>
             </div>
@@ -34,7 +34,7 @@ export default {
             </div>
             <div class="description">
                 <h3>{{ title }}</h3>
-                <span>{{ text }}</span>
+                <span class="txt-playfair-display">{{ text }}</span>
             </div>
         </div>
     </div>

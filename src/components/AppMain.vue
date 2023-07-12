@@ -67,7 +67,7 @@ export default {
 
         <!-- Process Cards -->
         <section class="container-m">
-            <h2>Working <span class="txt-playfair-display">process</span></h2>
+            <h2>Working <span class="txt-playfair-display bold">process</span></h2>
             <div class="wrapper">
                 <BaseCard :section="'process-cards'" v-for="(card, i) in processCards" :key="`Process card ${i}`"
                     :className="'process card small'" :title="card.title" :text="card.text" />
@@ -78,7 +78,7 @@ export default {
         <TheJumbotron />
 
         <!-- Blog List -->
-        <section class="container-m">
+        <section id="blog-list" class="container-m">
             <div class="wrapper">
                 <BaseCard :section="'blog-list'" v-for="(card, i) in blogCards" :key="`Blog card ${i}`" :blogImg="card.img"
                     :title="card.title" :text="card.text" />
@@ -91,4 +91,13 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/style.scss' as *;
 @use '../assets/scss/_colors.scss' as *;
+
+#blog-list {
+    padding: 0 -20px;
+}
+
+h2 {
+    text-align: center;
+    padding: 90px 0 40px 0;
+}
 </style>

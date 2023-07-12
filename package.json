@@ -11,6 +11,9 @@
   "dependencies": {
     "@fontsource-variable/mulish": "^5.0.6",
     "@fontsource-variable/playfair-display": "^5.0.6",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "sass": "^1.63.6",
     "vue": "^3.2.47"
   },
