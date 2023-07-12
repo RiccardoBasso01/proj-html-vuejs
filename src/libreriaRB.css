@@ -24,32 +24,6 @@ body {
     background: transparent;
 }
 
-:root {
-    --font-size-xxxs: calc(0.3rem + 0.2vw);
-    --font-size-xxs: calc(0.5rem + 0.2vw);
-    --font-size-xs: 13px;
-    --font-size-s: 15px;
-    --font-size-m: 16px;
-    --font-size-l: 20px;
-    --font-size-xl: 30px;
-    --font-size-xxl: 65px;
-    --font-size-xxxl: 80px;
-
-    --color-card: #ec407a;
-    --light-grey: #cdcdcd;
-    --grey: #969696;
-    --dark-grey: #3b3b3b;
-    --blue: #4285f4;
-    --light-blue: #b4d0e7;
-    --dark-blue: #00335d;
-    --orange: #fabb05;
-    --light-orange: rgb(244, 213, 141);
-    --red: #ff0000;
-    --light-red: #cd6161;
-    --dark-red: rgb(107, 0, 0);
-    --light-green: #85df85;
-}
-
 img {
     width: 100%;
     display: block;
@@ -65,21 +39,6 @@ ul {
     list-style-type: none;
 }
 
-h1 {
-    font-size: var(--font-size-xxxl);
-}
-
-h2 {
-    font-size: var(--font-size-xxl);
-}
-
-h3 {
-    font-size: var(--font-size-xl);
-}
-
-h4{
-    font-size: var(--font-size-l);
-}
 /**************************************/
 /*************** HEADER ***************/
 /**************************************/

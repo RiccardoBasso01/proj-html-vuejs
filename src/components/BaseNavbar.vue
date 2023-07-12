@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div class="navbar">
-        <ul class="text-uppercase">
+        <ul>
             <li v-for="link in links"><a href="#">{{ link }}</a></li>
         </ul>
     </div>
@@ -25,8 +25,13 @@ export default {
 }
 
 ul {
+    @include font(xs, 700, $color: $black, $letter-spacing: 3px, $text-transform: uppercase);
     display: flex;
     gap: 50px;
+}
+
+li {
+    @include text_underscore($bg-otto-ice, 5px, .2s);
 }
 
 @media screen and (min-width: 992px) {

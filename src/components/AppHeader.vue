@@ -35,4 +35,8 @@ header {
     @include flex(space-between, center);
     gap: 20px;
 }
+
+button {
+    margin-left: 20px;
+}
 </style>

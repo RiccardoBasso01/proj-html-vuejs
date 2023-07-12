@@ -32,12 +32,13 @@ export default {
             <div class="blog-img">
                 <img :src="blogImg">
             </div>
-            <div class="description">
-                <h3 class="pY-2">{{ title }}</h3>
-                <span class="txt-playfair-display">{{ text }}</span>
+            <div class="blog-description">
+                <h3 class="pY-2"><a href="#">{{ title }}</a></h3>
+                <div class="txt-playfair-display">{{ text }}</div>
             </div>
             <slot></slot>
         </div>
+
     </div>
 </template>
 
@@ -71,6 +72,10 @@ export default {
 
 .blog-img:hover img {
     scale: 1.1;
+}
+
+.blog-description a {
+    @include text_underscore($bg-teal-treat, 10px);
 }
 
 //________________________________________________ Logica Card Responsive

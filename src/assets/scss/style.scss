@@ -6,7 +6,7 @@ $mulish: 'Mulish Variable', sans-serif;
 $playfair-display: 'Playfair Display Variable', sans-serif;
 
 //________________________________________________ MIXIN
-@mixin font($size: default, $weight: inherit, $family: $mulish, $color:  inherit, $letter-spacing: normal, $text-transform: none ){
+@mixin font($size: inherit, $weight: inherit, $family: $mulish, $color:  inherit, $letter-spacing: normal, $text-transform: none ){
     @if $size == 'xs'{
         font-size: 13px;
     }@else if $size == 's'{
@@ -19,7 +19,7 @@ $playfair-display: 'Playfair Display Variable', sans-serif;
         font-size: 30px;
     }@else if $size == 'xxl'{
         font-size: 65px;
-    }@else if $size == 'xxl'{
+    }@else if $size == 'xxxl'{
         font-size: 80px;
     }@else {
         font-size: $size;
@@ -53,6 +53,21 @@ $playfair-display: 'Playfair Display Variable', sans-serif;
     border-radius: 50%;
 }
 
+//_________________________ Sottolineatura testo
+@mixin text_underscore($color, $height, $duration: .5s){
+    display: inline;
+    background-image: linear-gradient($color, $color);
+    background-size: 0 $height;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size $duration linear;
+    
+    &:hover {
+        background-size: 100% $height;
+    }
+}
+
+
 //________________________________________________ CLASSI GENERICHE
 .txt-playfair-display {
     font-family: $playfair-display;
@@ -61,28 +76,39 @@ $playfair-display: 'Playfair Display Variable', sans-serif;
     }
 }
 
-.text-uppercase{
-    @include font(xs, 700, $color: $black, $letter-spacing: 3px, $text-transform: uppercase);
-}
-
 body {
     @include font($color: $txt-dove-grey);
-}
-
-h1,h2,h3,h4,h5,h6{
-    @include font($weight: 300, $color: $black);
-}
-
-p {
-    line-height: 25px;
 }
 
 section{
     margin-bottom: 100px;
 }
 
+p {
+    line-height: 25px;
+}
+
 .wrapper {
     display: flex;
     flex-wrap: wrap;
 }
+
+//_________________________ Headings
+h1{
+    @include font(xxxl, 300, $color: $black);
+}
+
+h2{
+    @include font(xxl, 300, $color: $black);
+}
+
+h3{
+    @include font(xl, 400, $color: $black);
+}
+
+h4,h5,h6{
+    @include font(l, 500, $color: $black);
+}
+
+
 
