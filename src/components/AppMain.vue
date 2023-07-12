@@ -44,17 +44,32 @@ export default {
                 {
                     img: './src/assets/img/h-2-blog-img-1.jpg',
                     title: 'This way, loves: a detailed guide through new design',
-                    text: 'By Emily Fields'
+                    text: 'By Riccardo Basso',
+                    date: {
+                        day: '10',
+                        mounth: 'MAY',
+                        year: '\'22'
+                    }
                 },
                 {
                     img: './src/assets/img/h-2-blog-img-2.jpg',
                     title: 'I try to give people a different way of looking art',
-                    text: 'By Emily Fields'
+                    text: 'By Richard Gere',
+                    date: {
+                        day: '12',
+                        mounth: 'JUL',
+                        year: '\'23'
+                    }
                 },
                 {
                     img: './src/assets/img/h-2-blog-img-3.jpg',
                     title: 'Introduce Richard Laperrière of those amazing features',
-                    text: 'By Emily Fields'
+                    text: 'By Peter Dinklage',
+                    date: {
+                        day: '14',
+                        mounth: 'OCT',
+                        year: '\'23'
+                    }
                 },
             ]
         }
@@ -97,7 +112,25 @@ export default {
         <section id="blog-list" class="container-m">
             <div class="wrapper">
                 <BaseCard :section="'blog-list'" v-for="(card, i) in blogCards" :key="`Blog card ${i}`" :blogImg="card.img"
-                    :title="card.title" :text="card.text" />
+                    :title="card.title" :text="card.text">
+                    <div class="blog-date">
+                        <div class="blog-date-top">
+                            {{ card.date.day }}
+                        </div>
+                        <div class="blog-date-bottom">
+                            {{ card.date.mounth }}
+                            {{ card.date.year }}
+                        </div>
+                        <!-- Triangoli di sfondo  -->
+                        <div class="triangle">
+                            <span class="triangle-left">
+                            </span>
+                            <span class="triangle-right">
+                            </span>
+                        </div>
+
+                    </div>
+                </BaseCard>
             </div>
         </section>
 
@@ -135,6 +168,59 @@ h2 {
 
 // Sezione blog list
 #blog-list {
-    padding: 0 -20px;
+    padding: 0 -15px;
+
+    .card {
+        text-align: start;
+        position: relative;
+        padding: 0 15px;
+    }
+}
+
+.blog-date {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    width: 66px;
+    text-align: center;
+
+    .blog-date-top {
+        @include font(35px, 800, $playfair-display, $black);
+        line-height: 26px;
+        background-color: $bg-otto-ice;
+        padding-bottom: 20px;
+    }
+
+    .blog-date-bottom {
+        @include font(11px, 700, $mulish, $black, 1.1px, uppercase);
+        background-color: $bg-comical-coral;
+        padding: 5px 0;
+    }
+}
+
+.triangle {
+    display: flex;
+    width: 100%;
+}
+
+@mixin triangle($direction) {
+    width: 50%;
+    border-bottom: 15px solid transparent;
+
+    @if $direction =='left' {
+        border-left: 33px solid $bg-comical-coral;
+    }
+
+    @else if $direction =='right' {
+        border-right: 33px solid $bg-comical-coral;
+    }
+}
+
+.triangle-left {
+    @include triangle (left)
+}
+
+.triangle-right {
+    @include triangle (right)
 }
 </style>

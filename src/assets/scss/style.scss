@@ -1,35 +1,76 @@
 @use './colors' as *;
 
+//________________________________________________ VARIABILI
 // Font
 $mulish: 'Mulish Variable', sans-serif;
 $playfair-display: 'Playfair Display Variable', sans-serif;
 
-// Classi Generiche
+//________________________________________________ MIXIN
+@mixin font($size: default, $weight: inherit, $family: $mulish, $color:  inherit, $letter-spacing: normal, $text-transform: none ){
+    @if $size == 'xs'{
+        font-size: 13px;
+    }@else if $size == 's'{
+        font-size: 15px;
+    }@else if $size == 'm'{
+        font-size: 16px;
+    }@else if $size == 'l'{
+        font-size: 20px;
+    }@else if $size == 'xl'{
+        font-size: 30px;
+    }@else if $size == 'xxl'{
+        font-size: 65px;
+    }@else if $size == 'xxl'{
+        font-size: 80px;
+    }@else {
+        font-size: $size;
+    }
+
+    font-weight: $weight;
+    font-family: $family;
+    color: $color;
+    letter-spacing: $letter-spacing;
+    text-transform: $text-transform;
+}
+
+@mixin button($border-color, $bg-color){
+    @include font(xs, 700, $color: $black, $letter-spacing: 3px, $text-transform: uppercase);
+    font-size: 13px;
+    padding: 17px 50px;
+    border: 3px solid $border-color;
+    background-color: $bg-color;
+}
+
+@mixin flex( $justify-content, $align-items, $direction: row){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin rounded($space){
+    width: $space;
+    height: $space;
+    border-radius: 50%;
+}
+
+//________________________________________________ CLASSI GENERICHE
 .txt-playfair-display {
     font-family: $playfair-display;
     &.bold{
         font-weight: 900
-
     }
 }
 
 .text-uppercase{
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: $black;
-    font-weight: 700;
-    font-size: var(--font-size-xs);
+    @include font(xs, 700, $color: $black, $letter-spacing: 3px, $text-transform: uppercase);
 }
 
 body {
-    font-family: $mulish;
-    color: $txt-dove-grey;
-    font-weight: 200;
+    @include font($color: $txt-dove-grey);
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-weight: 300;
-    color: $black;
+    @include font($weight: 300, $color: $black);
 }
 
 p {
@@ -45,22 +86,3 @@ section{
     flex-wrap: wrap;
 }
 
-@mixin button($border-color, $bg-color){
-    font-size: 13px;
-    padding: 17px 50px;
-    border: 3px solid $border-color;
-    background-color: $bg-color;
-}
-
-@mixin flex($direction, $justify-content, $align-items){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
-
-@mixin rounded($space){
-    width: $space;
-    height: $space;
-    border-radius: 50%;
-}

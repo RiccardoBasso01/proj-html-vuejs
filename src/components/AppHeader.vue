@@ -27,12 +27,12 @@ export default {
 @use '../assets/scss/style.scss' as *;
 
 header {
-    @include flex(row, space-between, center);
+    @include flex(space-between, center);
     height: 70px
 }
 
 .menu {
-    @include flex(row, space-between, center);
+    @include flex(space-between, center);
     gap: 20px;
 }
 </style>

@@ -8,7 +8,7 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde animi illo corporis omnis, adipisci laudantium
                 facilis! Voluptate id nesciunt, laboriosam eius assumenda impedit voluptas accusantium incidunt quos aliquam
                 reprehenderit ea!</p>
-            <button class="text-uppercase">contact</button>
+            <button>contact</button>
         </div>
     </section>
 </template>
@@ -18,11 +18,11 @@
 @use '../assets/scss/_colors.scss' as *;
 
 .jumbotron {
-    text-align: center;
     background-image: url(../assets/img/h-2-background-1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
     padding: 115px 4%;
 }
 
@@ -32,7 +32,7 @@ h2 {
 }
 
 p {
-    font-size: var(--font-size-l);
+    @include font(l);
     margin: 20px 0 40px 0;
 }
 

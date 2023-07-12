@@ -21,9 +21,4 @@ export default {
 
 <style lang="scss">
 @use './assets/scss/style.scss' as *;
-
-
-.txt-playfair-display {
-    font-family: $playfair-display;
-}
 </style>

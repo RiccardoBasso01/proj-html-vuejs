@@ -8,7 +8,7 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt quam nemo odit fugiat officia debitis
                 beatae
             </p>
-            <button class="text-uppercase">read more</button>
+            <button>read more</button>
         </div>
 
         <div class="image">
@@ -22,7 +22,7 @@
 @use '../assets/scss/_colors.scss' as *;
 
 .slider {
-    @include flex(column, center, center);
+    @include flex(center, center, column);
     padding: 0 40px;
 }
 
@@ -32,7 +32,7 @@ img {
 
 @media screen and (min-width: 992px) {
     .slider {
-        @include flex(row, center, center);
+        @include flex(center, center);
 
         >div {
             flex: 0 0 50%;

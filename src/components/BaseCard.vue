@@ -28,14 +28,15 @@ export default {
         </div>
 
         <!-- Blog List -->
-        <div v-if="section === 'blog-list'" class="p-2">
-            <div class="img">
+        <div v-if="section === 'blog-list'">
+            <div class="blog-img">
                 <img :src="blogImg">
             </div>
             <div class="description">
-                <h3>{{ title }}</h3>
+                <h3 class="pY-2">{{ title }}</h3>
                 <span class="txt-playfair-display">{{ text }}</span>
             </div>
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -49,18 +50,30 @@ export default {
 
 // Sezione Process card
 .process.card>div {
-    @include flex(column, center, center)
+    @include flex(center, center, column)
 }
 
 .process .card-img {
     @include rounded(162px);
-    @include flex(row, center, center);
+    @include flex(center, center);
     background-color: $bg-milk-glass;
     font-size: 50px;
 }
 
+// Sezione Blog card
+.blog-img {
+    overflow: hidden;
 
-//---------------------------------------------- Logica card responsive
+    img {
+        transition: scale 1s;
+    }
+}
+
+.blog-img:hover img {
+    scale: 1.1;
+}
+
+//________________________________________________ Logica Card Responsive
 @media screen and (min-width: 700px) {
     .card {
         width: calc(100% / 2);

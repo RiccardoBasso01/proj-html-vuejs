@@ -1,14 +1,17 @@
-<script></script>
+<script>
+export default {
+    data() {
+        return {
+            links: ['home', 'pages', 'portfolio', 'blog', 'shop', 'elements']
+        }
+    }
+}
+</script>
 
 <template>
     <div class="navbar">
         <ul class="text-uppercase">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Elements</a></li>
+            <li v-for="link in links"><a href="#">{{ link }}</a></li>
         </ul>
     </div>
 </template>
