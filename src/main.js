@@ -16,8 +16,10 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import { faComment } from '@fortawesome/free-solid-svg-icons'
 import { faCloud } from '@fortawesome/free-solid-svg-icons'
 import { faPen } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faTwitter, faPinterestP, faFacebookF, faLinkedinIn, faLightbulb, faComment, faCloud, faPen)
+library.add(faTwitter, faPinterestP, faFacebookF, faLinkedinIn, faLightbulb, faComment, faCloud, faPen, faChevronLeft, faChevronRight)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)

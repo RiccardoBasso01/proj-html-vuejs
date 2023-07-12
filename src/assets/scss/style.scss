@@ -47,10 +47,11 @@ $playfair-display: 'Playfair Display Variable', sans-serif;
     align-items: $align-items;
 }
 
-@mixin rounded($space){
+@mixin rounded($space, $color: transparent){
     width: $space;
     height: $space;
     border-radius: 50%;
+    background-color: $color;
 }
 
 //_________________________ Sottolineatura testo
@@ -69,13 +70,6 @@ $playfair-display: 'Playfair Display Variable', sans-serif;
 
 
 //________________________________________________ CLASSI GENERICHE
-.txt-playfair-display {
-    font-family: $playfair-display;
-    &.bold{
-        font-weight: 900
-    }
-}
-
 body {
     @include font($color: $txt-dove-grey);
 }
@@ -108,6 +102,11 @@ h3{
 
 h4,h5,h6{
     @include font(l, 500, $color: $black);
+}
+
+h1 span,
+h2 span{
+    @include font($weight: 900, $family: $playfair-display)
 }
 
 

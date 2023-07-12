@@ -55,9 +55,8 @@ export default {
 }
 
 .process .card-img {
-    @include rounded(162px);
+    @include rounded(162px, $bg-milk-glass);
     @include flex(center, center);
-    background-color: $bg-milk-glass;
     font-size: 50px;
 }
 

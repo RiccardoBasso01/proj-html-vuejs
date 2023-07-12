@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <header class="container-m">
+    <header>
         <div class="logo">
             <img src="../assets/img/logo-sidearea-1.png" alt="logo">
         </div>
@@ -28,7 +28,8 @@ export default {
 
 header {
     @include flex(space-between, center);
-    height: 70px
+    height: 80px;
+    padding: 0 40px
 }
 
 .menu {

@@ -4,7 +4,7 @@
 <template>
     <section class="jumbotron">
         <div class="container-m">
-            <h2>Want to work with us? Send us <span class="txt-playfair-display bold">a message!</span></h2>
+            <h2>Want to work with us? Send us <span>a message!</span></h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde animi illo corporis omnis, adipisci laudantium
                 facilis! Voluptate id nesciunt, laboriosam eius assumenda impedit voluptas accusantium incidunt quos aliquam
                 reprehenderit ea!</p>

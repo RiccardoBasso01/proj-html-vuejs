@@ -540,7 +540,6 @@ header {
 .card-l,
 .card {
     width: 100%;
-
     text-align: center;
 }
 
@@ -570,12 +569,6 @@ header {
 }
 
 /** Media query larghezza card */
-@media screen and (min-width: 576px) {
-    .card {
-        width: 540px;
-    }
-}
-
 @media screen and (min-width: 768px) {
     .card {
         width: 600px;

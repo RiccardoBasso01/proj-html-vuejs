@@ -98,7 +98,7 @@ export default {
 
         <!-- Process Cards -->
         <section id="process-card" class="container-m">
-            <h2>Working <span class="txt-playfair-display bold">process</span></h2>
+            <h2>Working <span>process</span></h2>
             <div class="wrapper">
                 <BaseCard :section="'process-cards'" v-for="(card, i) in processCards" :key="`Process card ${i}`"
                     :className="'process card small'" :title="card.title" :text="card.text" :icon="card.icon" />
@@ -174,6 +174,7 @@ h2 {
         text-align: start;
         position: relative;
         padding: 0 15px;
+        margin-top: 50px;
     }
 }
 
