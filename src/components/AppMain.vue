@@ -111,7 +111,7 @@ export default {
 // Sezione process card
 h2 {
     text-align: center;
-    padding: 90px 0 40px 0;
+    padding-bottom: 40px;
 }
 
 @media screen and (min-width: 992px) {
