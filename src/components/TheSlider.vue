@@ -58,7 +58,9 @@ export default {
         <div id="arrow-left" @click="goBack"><font-awesome-icon :icon="['fas', 'chevron-left']" /></div>
         <a href="#" id="arrow-right" @click="goAhead"><font-awesome-icon :icon="['fas', 'chevron-right']" /></a>
 
+        <!-- Slide -->
         <div v-for="(slide, i) in slides" :key="`Slide ${i}`" v-show="currentIndex === i" class="slide">
+            <!-- testo -->
             <div class="description">
                 <h1>{{ slide.title.row1 }} <br> {{ slide.title.row2 }} <span>{{
                     slide.title.bolder }}</span></h1>
@@ -66,8 +68,8 @@ export default {
                 </p>
                 <button>read more</button>
             </div>
-
-            <div class="slide-img">
+            <!-- Immagini -->
+            <div :class="`slide-img-${i + 1}`">
                 <img :src="getImagePath(slide.img[0])" alt="slide img">
                 <img v-if="slide.img[1]" :src="getImagePath(slide.img[1])" alt="slide img">
             </div>
@@ -89,13 +91,10 @@ export default {
     user-select: none;
 }
 
-.slide-img {
-    @include flex(center, center)
-}
-
+//_________________________________________________ Immagine/i principali 
 img {
-    max-width: 340px;
-    max-height: 250px;
+    width: 340px;
+    height: 250px;
     margin-top: 20px;
     object-fit: contain;
 }
@@ -109,10 +108,15 @@ img {
         }
     }
 
-    img {
-        max-height: 375px;
-        max-width: 590px;
-        margin: 0;
+    div[class^="slide-img"] {
+        max-width: 100%;
+
+        img {
+            margin: 0;
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }
     }
 }
 
@@ -139,6 +143,7 @@ button {
     }
 }
 
+//_________________________________________________ Frecce incremento e decremento 
 #arrow-left,
 #arrow-right {
     @include rounded(35px, $bg-adorable);
@@ -152,5 +157,94 @@ button {
 
 #arrow-right {
     @include arrow(right)
+}
+
+//_________________________________________________ Immagini di background
+@mixin bgc_images($urls, $positions, $sizes) {
+    background-image: $urls;
+    background-position: $positions;
+    background-size: $sizes;
+}
+
+$urls_1: url(../assets/img/short-slider-rev-1-img-2.png),
+    url(../assets/img/short-slider-rev-1-img-6.png),
+    url(../assets/img/h-2-slider-img-13.png),
+    url(../assets/img/h-2-slider-img-12.png),
+    url(../assets/img/h-2-slider-img-14.png);
+$positions_1: 0 30%,
+    90% 40px,
+    15% 100%,
+    0 90%,
+    100% 100%;
+$sizes_1: 40px,
+    40px,
+    45px,
+    40px,
+    50px;
+
+$urls_2: url(../assets/img/short-slider-rev-1-img-2.png),
+    url(../assets/img/short-slider-rev-1-img-6.png),
+    url(../assets/img/h-2-slider-img-13.png),
+    url(../assets/img/h-2-slider-img-12.png),
+    url(../assets/img/h-2-slider-img-14.png),
+    url(../assets/img/h-2-slider-img-17.png);
+$positions_2: 0 5%,
+    90% 25%,
+    8% 100%,
+    0 70%,
+    90% 0,
+    100% 100%;
+$sizes_2: 35px,
+    35px,
+    40px,
+    35px,
+    35px,
+    50px;
+
+$urls_3: url(../assets/img/short-slider-rev-1-img-2.png),
+    url(../assets/img/short-slider-rev-1-img-6.png),
+    url(../assets/img/short-slider-rev-1-img-1.png),
+    url(../assets/img/short-slider-rev-1-img-7.png),
+    url(../assets/img/short-slider-rev-1-img-8.png),
+    url(../assets/img/short-slider-rev-1-img-9.png),
+    url(../assets/img/short-slider-rev-1-img-10.png),
+    url(../assets/img/short-slider-rev-1-img-4.png),
+    url(../assets/img/short-slider-rev-1-img-5.png);
+$positions_3: 0 30%,
+    80% 40%,
+    0 100%,
+    20% 90%,
+    80% 90%,
+    95% 100%,
+    100% 100%,
+    92% 20%,
+    100% 20%;
+$sizes_3: 40px,
+    35px,
+    100px,
+    30px,
+    40px,
+    60px,
+    30px,
+    80px,
+    80px;
+
+.slide-img-1 {
+    @include bgc_images($urls_1, $positions_1, $sizes_1);
+}
+
+.slide-img-2 {
+    @include bgc_images($urls_2, $positions_2, $sizes_2);
+}
+
+.slide-img-3 {
+    @include bgc_images($urls_3, $positions_3, $sizes_3);
+}
+
+
+div[class^="slide-img"] {
+    @include flex(center, center);
+    background-repeat: no-repeat;
+    width: 100%;
 }
 </style>
