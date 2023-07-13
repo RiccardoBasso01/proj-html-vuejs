@@ -2,9 +2,10 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import BaseSidePopUp from './components/BaseSidePopUp.vue';
 
 export default {
-    components: { AppHeader, AppMain, AppFooter },
+    components: { AppHeader, AppMain, AppFooter, BaseSidePopUp },
 }
 </script>
 
@@ -17,6 +18,9 @@ export default {
 
     <!-- Footer -->
     <AppFooter />
+
+    <!-- Pop ups -->
+    <BaseSidePopUp />
 </template>
 
 <style lang="scss">

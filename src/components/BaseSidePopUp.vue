@@ -12,7 +12,12 @@
         <div class="pop-up-text">buy now</div>
     </div>
 
-    <!-- Frecia pop-up -->
+    <!-- Frecia back to top -->
+    <div class="back-to-top">
+        <a href="#" class="top">
+            <img src="@/assets/img/svg/svg-2.svg" alt="">
+        </a>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -20,10 +25,11 @@
 @use '@/assets/scss/style.scss' as *;
 
 
-@mixin pop_up($top, $right: 0, $background-color: $white, $color: black) {
+@mixin pop_up($top: auto, $right: 0, $bottom: auto, $background-color: $white, $color: black, $position: fixed) {
     @include flex(center, center);
-    position: fixed;
+    position: $position;
     top: $top;
+    bottom: $bottom;
     right: $right;
     z-index: 1;
     background-color: $background-color;
@@ -43,7 +49,7 @@ a {
 }
 
 .pop-up-top {
-    @include pop_up(15%, 0, $bg-strawberry-pop, $color: $white);
+    @include pop_up(15%, 0, $background-color: $bg-strawberry-pop, $color: $white);
 
     img {
         width: 25px;
@@ -64,5 +70,18 @@ a {
     width: 0;
     transition: width .3s, color .2s .1s;
     white-space: nowrap;
+}
+
+// Frecia back to top
+.back-to-top {
+    @include pop_up($bottom: 20px, $right: auto, $background-color: $bg-otto-ice, $color: white, $position: sticky);
+    left: 20px;
+    width: 45px;
+    margin-top: calc(100vh + 50px);
+    margin-right: 0;
+
+    img {
+        width: 20px;
+    }
 }
 </style>
