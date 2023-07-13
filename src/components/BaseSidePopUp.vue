@@ -5,11 +5,11 @@
     <!-- Side Pop Up -->
     <div class="pop-up-top">
         <a href="#"><img src="@/assets/img/svg/svg-4.svg" alt="pop-up-img"></a>
-        <div class="pop-up-text">related</div>
+        <div class="pop-up-text"><a href="#">related</a></div>
     </div>
     <div class="pop-up-bottom">
         <a href="#"><img src="@/assets/img/svg/svg-6.svg" alt="pop-up-img"></a>
-        <div class="pop-up-text">buy now</div>
+        <div class="pop-up-text"><a href="#">buy now</a></div>
     </div>
 
     <!-- Frecia back to top -->
