@@ -74,11 +74,9 @@ a {
 
 // Frecia back to top
 .back-to-top {
-    @include pop_up($bottom: 20px, $right: auto, $background-color: $bg-otto-ice, $color: white, $position: sticky);
-    left: 20px;
+    @include pop_up($bottom: 20px, $right: 20px, $background-color: $bg-otto-ice, $color: white, $position: fixed);
     width: 45px;
-    margin-top: calc(100vh + 50px);
-    margin-right: 0;
+    margin-top: 100vh;
 
     img {
         width: 20px;
