@@ -14,22 +14,22 @@ export default {
     <footer>
         <div class="container-m">
             <div class="wrapper">
-                <BaseCard :className="'card small'">
+                <BaseCard :className="'card small'" v-slot:footer>
                     <a href="#"><img src="@/assets/img/logo-sidearea-1.png" alt="footer logo"></a>
                     <div>Lets get crative</div>
                 </BaseCard>
 
-                <BaseCard :className="'card small'">
+                <BaseCard :className="'card small'" v-slot:footer>
                     <div><a href="#">maree@qodeinteractive.com</a></div>
                     <div><a href="#">+44645 321 789</a></div>
                 </BaseCard>
 
-                <BaseCard :className="'card small'">
+                <BaseCard :className="'card small'" v-slot:footer>
                     <div><a href="#">Avenue d’Auderghem 10</a></div>
                     <div><a href="#">1040 Brussels, Belgium</a></div>
                 </BaseCard>
 
-                <BaseCard :className="'card small'">
+                <BaseCard :className="'card small'" v-slot:footer>
                     <div>Stay in touch with us</div>
                     <ul class="flex gap-3">
                         <li><a href="#"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>

@@ -81,8 +81,6 @@ $playfair-display: 'Playfair Display Variable', sans-serif;
     }
 }
 
-//_________________________ Hover Bottoni
-
 //________________________________________________ CLASSI GENERICHE
 body {
     @include font($color: $txt-dove-grey);
@@ -114,9 +112,14 @@ h3{
     @include font(xl, 400, $color: $black);
 }
 
-h4,h5,h6{
+h4{
+    @include font(25px, 400, $color: $black);
+}
+
+h5,h6{
     @include font(l, 500, $color: $black);
 }
+
 
 h1 span,
 h2 span{

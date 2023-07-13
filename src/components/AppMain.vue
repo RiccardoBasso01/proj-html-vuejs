@@ -6,6 +6,32 @@ import TheJumbotron from './TheJumbotron.vue';
 export default {
     data() {
         return {
+            galleryCards: [
+                {
+                    title: 'All these illustrations',
+                    subtitle: 'illustration'
+                },
+                {
+                    title: 'Type and illustration',
+                    subtitle: 'illustration'
+                },
+                {
+                    title: 'Draw and illustrate',
+                    subtitle: 'illustration'
+                },
+                {
+                    title: 'Illustration of novels',
+                    subtitle: 'illustration'
+                },
+                {
+                    title: 'Too many illustrations',
+                    subtitle: 'illustration'
+                },
+                {
+                    title: 'Dreams are illustrations',
+                    subtitle: 'illustration'
+                }
+            ],
             processCards: [
                 {
                     title: 'First theres an idea',
@@ -90,9 +116,10 @@ export default {
         <TheSlider />
 
         <!-- Gallery -->
-        <section class="wrapper">
-            <BaseCard v-for="n in 6" :key="n">
-                <img :src="getImagePath(`h-2-port-img-${n}.jpg`)" :alt="`portfolio ${n}`">
+        <section id="gallery" class="wrapper">
+            <BaseCard :section="'gallery'" v-for="(card, i) in galleryCards" :key="`Gallery card ${i}`"
+                :class="'gallery card'" :title="card.title" :subtitle="card.subtitle" v-slot:gallery>
+                <img :src="getImagePath(`h-2-port-img-${i + 1}.jpg`)" :alt="`portfolio ${i + 1}`">
             </BaseCard>
         </section>
 
@@ -140,6 +167,12 @@ export default {
 <style lang="scss" scoped>
 @use '@/assets/scss/style.scss' as *;
 @use '@/assets/scss/_colors.scss' as *;
+
+// Sezione Gallery
+#gallery .card {
+    overflow: hidden;
+    position: relative;
+}
 
 // Sezione process card
 h2 {
