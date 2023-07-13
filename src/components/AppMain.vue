@@ -2,6 +2,7 @@
 import TheSlider from './TheSlider.vue';
 import BaseCard from './BaseCard.vue';
 import TheJumbotron from './TheJumbotron.vue';
+import BaseSidePopUp from './BaseSidePopUp.vue';
 
 export default {
     data() {
@@ -100,7 +101,7 @@ export default {
             ]
         }
     },
-    components: { TheSlider, BaseCard, TheJumbotron },
+    components: { TheSlider, BaseCard, TheJumbotron, BaseSidePopUp },
     methods: {
         getImagePath(imgName) {
             const url = new URL(`../assets/img/${imgName}`, import.meta.url)
@@ -112,6 +113,9 @@ export default {
 
 <template>
     <main>
+        <!-- Pop ups -->
+        <BaseSidePopUp />
+
         <!-- slider -->
         <TheSlider />
 

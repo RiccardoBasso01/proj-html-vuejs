@@ -9,7 +9,7 @@ export default {
 <template>
     <header>
         <div class="logo">
-            <img src="@/assets/img/logo-sidearea-1.png" alt="logo">
+            <a href="#"><img src="@/assets/img/logo-sidearea-1.png" alt="logo"></a>
         </div>
 
         <div class="menu">
