@@ -138,8 +138,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/style.scss' as *;
-@use '../assets/scss/_colors.scss' as *;
+@use '@/assets/scss/style.scss' as *;
+@use '@/assets/scss/_colors.scss' as *;
 
 // Sezione process card
 h2 {
@@ -149,7 +149,7 @@ h2 {
 
 @media screen and (min-width: 992px) {
     #process-card .wrapper {
-        background-image: url(../assets/img/svg/svg-3.svg);
+        background-image: url(@/assets/img/svg/svg-3.svg);
         background-repeat: no-repeat;
     }
 }

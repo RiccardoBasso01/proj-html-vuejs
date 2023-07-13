@@ -9,7 +9,7 @@ export default {
 <template>
     <header>
         <div class="logo">
-            <img src="../assets/img/logo-sidearea-1.png" alt="logo">
+            <img src="@/assets/img/logo-sidearea-1.png" alt="logo">
         </div>
 
         <div class="menu">
@@ -17,14 +17,14 @@ export default {
             <BaseNavbar />
 
             <button>
-                <img src="../assets/img/svg/svg-1.svg" alt="menu">
+                <img src="@/assets/img/svg/svg-1.svg" alt="menu">
             </button>
         </div>
     </header>
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/style.scss' as *;
+@use '@/assets/scss/style.scss' as *;
 
 header {
     @include flex(space-between, center);

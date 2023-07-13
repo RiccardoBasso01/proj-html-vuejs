@@ -78,8 +78,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/style.scss' as *;
-@use '../assets/scss/_colors.scss' as *;
+@use '@/assets/scss/style.scss' as *;
+@use '@/assets/scss/_colors.scss' as *;
 
 #slider {
     position: relative;
@@ -125,7 +125,7 @@ p {
 }
 
 button {
-    @include button($border-adorable, $white)
+    @include button($border-color: $border-adorable, $color-hover: $bg-adorable)
 }
 
 @mixin arrow($direction) {
@@ -166,11 +166,11 @@ button {
     background-size: $sizes;
 }
 
-$urls_1: url(../assets/img/short-slider-rev-1-img-2.png),
-    url(../assets/img/short-slider-rev-1-img-6.png),
-    url(../assets/img/h-2-slider-img-13.png),
-    url(../assets/img/h-2-slider-img-12.png),
-    url(../assets/img/h-2-slider-img-14.png);
+$urls_1: url(@/assets/img/short-slider-rev-1-img-2.png),
+    url(@/assets/img/short-slider-rev-1-img-6.png),
+    url(@/assets/img/h-2-slider-img-13.png),
+    url(@/assets/img/h-2-slider-img-12.png),
+    url(@/assets/img/h-2-slider-img-14.png);
 $positions_1: 0 30%,
     90% 40px,
     15% 100%,
@@ -182,12 +182,12 @@ $sizes_1: 40px,
     40px,
     50px;
 
-$urls_2: url(../assets/img/short-slider-rev-1-img-2.png),
-    url(../assets/img/short-slider-rev-1-img-6.png),
-    url(../assets/img/h-2-slider-img-13.png),
-    url(../assets/img/h-2-slider-img-12.png),
-    url(../assets/img/h-2-slider-img-14.png),
-    url(../assets/img/h-2-slider-img-17.png);
+$urls_2: url(@/assets/img/short-slider-rev-1-img-2.png),
+    url(@/assets/img/short-slider-rev-1-img-6.png),
+    url(@/assets/img/h-2-slider-img-13.png),
+    url(@/assets/img/h-2-slider-img-12.png),
+    url(@/assets/img/h-2-slider-img-14.png),
+    url(@/assets/img/h-2-slider-img-17.png);
 $positions_2: 0 5%,
     90% 25%,
     8% 100%,
@@ -201,15 +201,15 @@ $sizes_2: 35px,
     35px,
     50px;
 
-$urls_3: url(../assets/img/short-slider-rev-1-img-2.png),
-    url(../assets/img/short-slider-rev-1-img-6.png),
-    url(../assets/img/short-slider-rev-1-img-1.png),
-    url(../assets/img/short-slider-rev-1-img-7.png),
-    url(../assets/img/short-slider-rev-1-img-8.png),
-    url(../assets/img/short-slider-rev-1-img-9.png),
-    url(../assets/img/short-slider-rev-1-img-10.png),
-    url(../assets/img/short-slider-rev-1-img-4.png),
-    url(../assets/img/short-slider-rev-1-img-5.png);
+$urls_3: url(@/assets/img/short-slider-rev-1-img-2.png),
+    url(@/assets/img/short-slider-rev-1-img-6.png),
+    url(@/assets/img/short-slider-rev-1-img-1.png),
+    url(@/assets/img/short-slider-rev-1-img-7.png),
+    url(@/assets/img/short-slider-rev-1-img-8.png),
+    url(@/assets/img/short-slider-rev-1-img-9.png),
+    url(@/assets/img/short-slider-rev-1-img-10.png),
+    url(@/assets/img/short-slider-rev-1-img-4.png),
+    url(@/assets/img/short-slider-rev-1-img-5.png);
 $positions_3: 0 30%,
     80% 40%,
     0 100%,

@@ -14,11 +14,11 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/style.scss' as *;
-@use '../assets/scss/_colors.scss' as *;
+@use '@/assets/scss/style.scss' as *;
+@use '@/assets/scss/_colors.scss' as *;
 
 .jumbotron {
-    background-image: url(../assets/img/h-2-background-1.jpg);
+    background-image: url(@/assets/img/h-2-background-1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,6 +37,6 @@ p {
 }
 
 button {
-    @include button($bg-teal-treat, $bg-teal-treat)
+    @include button($bg-teal-treat, $color-hover: $bg-adorable)
 }
 </style>

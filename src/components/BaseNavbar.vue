@@ -17,8 +17,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/_colors.scss' as *;
-@use '../assets/scss/style.scss' as *;
+@use '@/assets/scss/_colors.scss' as *;
+@use '@/assets/scss/style.scss' as *;
 
 .navbar {
     display: none;

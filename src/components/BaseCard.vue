@@ -46,8 +46,8 @@ export default {
 
 
 <style lang="scss" scoped>
-@use '../assets/scss/_colors.scss' as *;
-@use '../assets/scss/style.scss' as *;
+@use '@/assets/scss/_colors.scss' as *;
+@use '@/assets/scss/style.scss' as *;
 
 // Sezione Process card
 .process.card>div {

@@ -15,7 +15,7 @@ export default {
         <div class="container-m">
             <div class="wrapper">
                 <BaseCard :className="'card small'">
-                    <a href="#"><img src="../assets/img/logo-sidearea-1.png" alt="footer logo"></a>
+                    <a href="#"><img src="@/assets/img/logo-sidearea-1.png" alt="footer logo"></a>
                     <div>Lets get crative</div>
                 </BaseCard>
 
@@ -44,8 +44,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/_colors.scss' as *;
-@use '../assets/scss/style.scss' as *;
+@use '@/assets/scss/_colors.scss' as *;
+@use '@/assets/scss/style.scss' as *;
 
 footer {
     background-color: $bg-otto-ice;

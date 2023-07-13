@@ -32,12 +32,25 @@ $playfair-display: 'Playfair Display Variable', sans-serif;
     text-transform: $text-transform;
 }
 
-@mixin button($border-color, $bg-color){
+@mixin button($bg-color: transparent, $border-color: transparent, $border-size: 3px, $color-hover: inherit, $direction-hover: right){
     @include font(xs, 700, $color: $black, $letter-spacing: 3px, $text-transform: uppercase);
-    font-size: 13px;
     padding: 17px 50px;
-    border: 3px solid $border-color;
-    background-color: $bg-color;
+    @if $border-color == transparent{
+        padding: calc(17px + $border-size) calc(50px + $border-size);
+    }
+    border: $border-size solid $border-color;
+    background-image: 
+    linear-gradient($bg-color ,$bg-color),
+    linear-gradient($color-hover ,$color-hover);
+    background-position: 100% 100%, 0 100%;
+    transition: background-size .3s ease-out;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 0 100%;
+
+    &:hover{
+        background-size:  0 100%, 100% 100%;
+        color: white;
+    }
 }
 
 @mixin flex( $justify-content, $align-items, $direction: row){
@@ -68,6 +81,7 @@ $playfair-display: 'Playfair Display Variable', sans-serif;
     }
 }
 
+//_________________________ Hover Bottoni
 
 //________________________________________________ CLASSI GENERICHE
 body {
